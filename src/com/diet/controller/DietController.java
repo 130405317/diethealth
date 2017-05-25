@@ -323,7 +323,7 @@ public class DietController {
 	
 	/**
 	 * 
-	 * <p>Title:跳转到运动记录列表界面</p>
+	 * <p>Title:跳转到运动量记录列表界面</p>
 	 * @author: 徐德荣
 	 * @date: 2016年12月29日
 	 *
@@ -442,7 +442,7 @@ public class DietController {
 	
 	/**
 	 * 
-	 * <p>Title:跳转到运动记录界面</p>
+	 * <p>Title:跳转到运动量记录界面</p>
 	 * @author: 徐德荣
 	 * @date: 2016年12月29日
 	 *
@@ -464,9 +464,9 @@ public class DietController {
 	@RequestMapping("dietary_info")
 	public String getDietaryInfo(HttpServletRequest request, Model model){
 		Map<String, Object> param = FormDataCollectUtil.getInstance().getFormData(request);
-		String pId = request.getParameter("pId");
+		//String pId = request.getParameter("pId");
 		//String pId = (String)request.getSession().getAttribute("pId");
-		//String pId = "o-1WTwgc5wIiSvUy0-8V92XA0sic";
+		String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
 		model.addAttribute("dietList", dietService.showDietInfo(param));
 		model.addAttribute("targetEnergy",dietService.getTargetEnergy(pId));
 		model.addAttribute("dietEnergy", dietService.showDietEnergy(param));
