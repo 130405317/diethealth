@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.user.mapper.UserMapper">
+  <select id="checkUser" parameterType="object" resultType="map">
+		SELECT * FROM patient t where t.p_id = #{id}
+	</select>
+	<select id="checkDoctor" parameterType="object" resultType="map">
+		SELECT * FROM doctor t where t.d_id = #{id} 
+	</select>
+	<insert id="saveUser" parameterType="object">
+	INSERT INTO patient(p_id,name,birthday,height,strength,pregnancy,weight,prepregnancyWeight,diabetesType,isUsedDrug,fetus_num,effectType,drugNum,registerDate,doctorId)
+	            values(#{pId},#{name},#{birthday},#{height},#{strength},#{pregnancy},#{weight},#{prepregnancyWeight},#{diabetesType},#{isUsedDrug},#{fetus_num},#{effectType},#{drugNum},#{registerDate},#{doctorId})
+	</insert>
+	<select id="showUserInfo" parameterType="object" resultType="map">
+	select * FROM patient WHERE p_id = #{pId}
+	</select>
+ 	<select id="checkDoctorById" parameterType="object" resultType="int">
+		SELECT count(*) FROM doctor t where t.d_id = #{dId}
+	</select>
+	<select id="showDoctorInfo" parameterType="object" resultType="map">
+	select * FROM doctor WHERE d_id = #{dId}
+	</select>
+	
+	 <delete id="deleteDoctorInfo">
+     DELETE FROM doctor WHERE d_id = #{dId}
+    </delete>
+    
+   <insert id="saveDoctorInfo" parameterType="object">
+	INSERT INTO doctor(d_id,name,office,phone,state)
+	            values(#{dId},#{name},#{office},#{phone},'1')
+	</insert>
+	
+	<update id="updateDoctorInfo" parameterType="object">
+	UPDATE doctor SET name = #{name},office = #{office},phone=#{phone}
+	WHERE d_id = #{dId}
+	</update> 
+	<update id="updateDoctorState" parameterType="object">
+	UPDATE doctor SET state=#{state}
+	WHERE d_id = #{dId}
+	</update> 
+	
+	<update id="updateUser" parameterType="object">
+	UPDATE patient SET name = #{name},birthday=#{birthday},height=#{height},strength=#{strength},pregnancy=#{pregnancy},fetus_num=#{fetus_num},isUsedDrug=#{isUsedDrug},
+	effectType=#{effectType},drugNum=#{drugNum},weight=#{weight},prepregnancyWeight=#{prepregnancyWeight},doctorId=#{doctorId},diabetesType=#{diabetesType}
+	WHERE p_id = #{pId}
+	</update> 
+	
+	<update id="saveAdvice" parameterType="object">
+	UPDATE patient SET advice = #{advice}
+	WHERE p_id = #{pId}
+	</update> 
+	 
+	 <select id="getDoctorList" parameterType="object" resultType="map">
+		SELECT * FROM doctor where state='2'
+	</select>
+	
+	 <select id="getDoctor" parameterType="object" resultType="map">
+		SELECT * FROM doctor where 1=1
+		<include refid="doctorsql" />
+		LIMIT  #{pageNum},#{numPerPage}		
+	</select>
+	<sql id="doctorsql">
+		<if test="dId!=null and dId!= ''">
+			and d_id = #{address}
+		</if>
+		<if test="name!=null and name!= ''">
+			and name like '${name}%'
+		</if>
+	</sql>
+	<select id="countDoctorTotal" parameterType="object"
+		resultType="int">
+		SELECT count(*) FROM doctor
+	</select>
+	
+	 <select id="getPatientList" parameterType="object" resultType="map">
+		SELECT t.*, a.name as doctorName FROM patient t left join doctor a on t.doctorId = a.d_id
+		LIMIT  #{pageNum},#{numPerPage}		
+	</select>
+	
+	<select id="countPatientTotal" parameterType="object"
+		resultType="int">
+		SELECT count(*) FROM patient
+	</select>
+	
+	 <select id="getPatientListWithState" parameterType="object" resultType="map">
+		SELECT t.* FROM patient t where 1=1
+		<include refid="patientsql" />
+		LIMIT  #{pageNum},#{numPerPage}		
+	</select>
+	
+	<select id="countPatientTotalWithState" parameterType="object"
+		resultType="int">
+		SELECT count(*) FROM patient where 1=1
+		<include refid="patientsql" />
+	</select>
+	<sql id="patientsql">
+		<if test="doctorId!=null and doctorId!= ''">
+			and doctorId = #{doctorId}
+		</if>
+	</sql>
+	<delete id="deletePatientInfo">
+     DELETE FROM patient WHERE p_id = #{pId}
+    </delete>
+    
+    <update id="updatePatientState" parameterType="object">
+	UPDATE patient SET state = #{state}
+	WHERE p_id = #{pId}
+	</update> 
+	
+	<select id="getAdviceListWithPage" parameterType="object" resultType="hashmap">
+		SELECT distinct p_id, date FROM advice where p_id = #{pId}
+		order by date desc
+		LIMIT  #{pageNum},#{numPerPage}		
+	</select>
+	<select id="countAdviceTotal" parameterType="object"
+		resultType="int">
+		SELECT count(*) FROM advice where p_id = #{pId}
+	</select>
+	
+	<select id="getAdviceInfo" parameterType="object" resultType="map">
+		SELECT * FROM advice where p_id = #{pId} and date = #{date}
+	</select>
+	
+	<select id="checkOpenId" parameterType="object" resultType="int">
+		SELECT count(*) FROM message where openid = #{openid}
+	</select>
+	 <insert id="saveOpenId" parameterType="object">
+	INSERT INTO message(openid) values(#{openid})
+	</insert>
+	
+	 <delete id="deleteOpenId">
+     DELETE FROM message WHERE openid = #{openId}
+    </delete>
+</mapper>

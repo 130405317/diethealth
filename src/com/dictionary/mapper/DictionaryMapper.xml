@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dictionary.mapper.DictionaryMapper">
+	<insert id="addDictionary" parameterType="object">
+	INSERT INTO dictionary(id,name,type)
+	 values(#{id},#{name},#{type})
+	</insert>
+	
+	 <update id="updateDictionary" parameterType="object">
+	UPDATE dictionary SET name = #{name}, type = #{type}
+	WHERE id = #{id} 
+	</update> 
+	
+	<select id="getDictionaryList" parameterType="object" resultType="map">
+		SELECT * FROM dictionary 
+	</select> 
+	
+	<select id="getDictionaryListByType" parameterType="object" resultType="map">
+		SELECT * FROM dictionary where type = #{type}
+	</select> 
+	
+	<select id="getDictionaryListById" parameterType="object" resultType="map">
+		SELECT * FROM dictionary where id = #{id}
+	</select> 
+	
+	 <delete id="deleteDictionaryById">
+     DELETE FROM dictionary WHERE id = #{id}
+    </delete>
+</mapper>                     
