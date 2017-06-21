@@ -1,13 +1,13 @@
 /* 
-*	jQuery文件上传插件,封装UI,上传处理操作采用Baidu WebUploader;
+*	jQuery文件识别插件,封装UI,识别处理操作采用Baidu WebUploader;
 *	@Author 黑爪爪;
 */
 (function( $ ) {
 	
     $.fn.extend({
 		/*
-		*	上传方法 opt为参数配置;
-		*	serverCallBack回调函数 每个文件上传至服务端后,服务端返回参数,无论成功失败都会调用 参数为服务器返回信息;
+		*	识别方法 opt为参数配置;
+		*	serverCallBack回调函数 每个文件识别至服务端后,服务端返回参数,无论成功失败都会调用 参数为服务器返回信息;
 		*/
         diyUpload:function( opt, serverCallBack ) {
  			if ( typeof opt != "object" ) {
@@ -47,7 +47,7 @@
 			var webUploader = getUploader( opt );
 			
 			if ( !WebUploader.Uploader.support() ) {
-				alert( ' 上传组件不支持您的浏览器！');
+				alert( ' 识别组件不支持您的浏览器！');
 				return false;
        		}
 			
@@ -67,7 +67,7 @@
 				
 			});
 			
-			//全部上传结束后触发;
+			//全部识别结束后触发;
 			webUploader.on('uploadFinished', function(){
 				$fileInput.next('.parentFileBox').children('.diyButton').remove();
 			});
@@ -76,7 +76,7 @@
 				if ( serverCallBack ) serverCallBack( data );
 			});
 			
-			//上传成功后触发事件;
+			//识别成功后触发事件;
 			webUploader.on('uploadSuccess',function( file, response ){
 				var $fileBox = $('#fileBox_'+file.id);
 				var $diyBar = $fileBox.find('.diyBar');	
@@ -89,12 +89,12 @@
 				}	
 			});
 			
-			//上传失败后触发事件;
+			//识别失败后触发事件;
 			webUploader.on('uploadError',function( file, reason ){
 				var $fileBox = $('#fileBox_'+file.id);
 				var $diyBar = $fileBox.find('.diyBar');	
-				showDiyProgress( 0, $diyBar , '上传失败!' );
-				var err = '上传失败! 文件:'+file.name+' 错误码:'+reason;
+				showDiyProgress( 0, $diyBar , '识别失败!' );
+				var err = '识别失败! 文件:'+file.name+' 错误码:'+reason;
 				if ( errorCallBack ) {
 					errorCallBack( err );
 				}
@@ -106,7 +106,7 @@
 				switch( code ) {
 					case  'F_DUPLICATE' : text = '该文件已经被选择了!' ;
 					break;
-					case  'Q_EXCEED_NUM_LIMIT' : text = '上传文件数量超过限制!' ;
+					case  'Q_EXCEED_NUM_LIMIT' : text = '识别文件数量超过限制!' ;
 					break;
 					case  'F_EXCEED_SIZE' : text = '文件大小超过限制!';
 					break;
@@ -154,17 +154,17 @@
 				// 否则强制转换成指定的类型。
 				type:"image/jpeg"
 			},
-			//文件上传方式
+			//文件识别方式
 			method:"POST",
 			//服务器地址;
 			server:"",
-			//是否已二进制的流的方式发送文件，这样整个上传内容php://input都为文件内容
+			//是否已二进制的流的方式发送文件，这样整个识别内容php://input都为文件内容
 			sendAsBinary:false,
-			// 开起分片上传。 thinkphp的上传类测试分片无效,图片丢失;
+			// 开起分片识别。 thinkphp的识别类测试分片无效,图片丢失;
 			chunked:true,
 			// 分片大小
 			chunkSize:512 * 1024,
-			//最大上传的文件数量, 总文件大小,单个文件大小(单位字节);
+			//最大识别的文件数量, 总文件大小,单个文件大小(单位字节);
 			fileNumLimit:50,
 			fileSizeLimit:5000 * 1024,
 			fileSingleSizeLimit:500 * 1024
@@ -182,7 +182,7 @@
 		
 		if ( progress >= 100 ) {
 			progress = progress + '%';
-			text = text || '上传完成';
+			text = text || '识别完成';
 		} else {
 			progress = progress + '%';
 			text = text || progress;
@@ -227,25 +227,25 @@
 		if ( $parentFileBox.find('.diyButton').length <= 0 ) {
 			
 			var div = '<div class="diyButton"> \
-						<a class="diyStart" href="javascript:void(0)">开始上传</a> \
+						<a class="diyStart" href="javascript:void(0)">开始识别</a> \
 						<a class="diyCancelAll" href="javascript:void(0)">全部取消</a> \
 					</div>';
 			$parentFileBox.append( div );
 			var $startButton = $parentFileBox.find('.diyStart');
 			var $cancelButton = $parentFileBox.find('.diyCancelAll');
 			
-			//开始上传,暂停上传,重新上传事件;
+			//开始识别,暂停识别,重新识别事件;
 			var uploadStart = function (){
 				webUploader.upload();
-				$startButton.text('暂停上传').one('click',function(){
+				$startButton.text('暂停识别').one('click',function(){
 						webUploader.stop();
-						$(this).text('继续上传').one('click',function(){
+						$(this).text('继续识别').one('click',function(){
 								uploadStart();
 						});
 				});
 			}
 				
-			//绑定开始上传按钮;
+			//绑定开始识别按钮;
 			$startButton.one('click',uploadStart);
 			
 			//绑定取消全部按钮;

@@ -86,4 +86,12 @@ public interface DietMapper {
 	void insertNewfood(Map<String, Object> param);
 	
 	List<Map<String, Object>> getAllFoodList();
+	
+	void savePhotoDiet(Map<String, Object> param);
+	
+	List<Map<String, Object>> getImgDietList(Map<String, Object> param);
+	
+	List<Map<String, Object>> countImgDietTotal(Map<String, Object> map);
+	
+	List<Map<String, Object>> getImgDietInfo(Map<String, Object> param);
 }

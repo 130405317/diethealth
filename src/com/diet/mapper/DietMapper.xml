@@ -215,4 +215,24 @@
 	    select * from food
 	</select>
 	
+	<insert id="savePhotoDiet" parameterType="object">
+	    insert into dietinfo (pid,date,type,food_name,food_weight,food_energy)
+	    values(#{pId},#{date},#{type},#{food_name},#{food_weight},#{food_energy})
+	</insert>
+	
+	<select id="getImgDietList" parameterType="object" resultType="map">
+	    SELECT distinct date, pid FROM dietinfo where pid = #{pId}
+		<include refid="dietsql" />
+		GROUP BY date
+		ORDER BY date DESC
+		LIMIT  #{pageNum},#{numPerPage} 
+	</select>
+	
+	<select id="countImgDietTotal" parameterType="object" resultType="hashmap">
+	    SELECT distinct date FROM dietinfo where pid = #{pId} GROUP BY date
+	</select>
+	
+	<select id="getImgDietInfo" parameterType="object" resultType="map">
+	    select * from dietinfo where pid=#{pId} and date=#{date} and type=#{type}
+	</select>
 </mapper>                     

@@ -161,7 +161,10 @@ public class DietController {
 	 *
 	 */
 	@RequestMapping("diet_img_upload")
-	public String dietImgUpload(HttpServletRequest request){
+	public String dietImgUpload(HttpServletRequest request, Model model){
+		String pId = (String)request.getSession().getAttribute("pId");
+		//String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
+		model.addAttribute("typeList",dietService.getTypeList(pId));
 		return "diet/img_upload";
 	}
 	
@@ -173,7 +176,8 @@ public class DietController {
 	 *
 	 */
 	@RequestMapping("/img_moreUpload")
-	public String imgMoreUpload(HttpServletRequest request){
+	@ResponseBody 
+	public List<String> imgMoreUpload(HttpServletRequest request){
 		
 		MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
 		Map<String, MultipartFile> files = multipartHttpServletRequest.getFileMap();
@@ -187,6 +191,7 @@ public class DietController {
 		List<String> fileList = new ArrayList<String>();
 		for (MultipartFile file :  files.values()) {
 			File targetFile = new File(uploadUrl + file.getOriginalFilename());
+			fileList.add(file.getOriginalFilename());
 			if (!targetFile.exists()) {
 				try {
 					targetFile.createNewFile();
@@ -197,7 +202,6 @@ public class DietController {
 				
 				try {
 					file.transferTo(targetFile);
-					fileList.add(uploadUrl+ file.getOriginalFilename());
 				} catch (IllegalStateException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -209,8 +213,7 @@ public class DietController {
 			}
 		}
 		
-		request.setAttribute("files", fileList);
-		return "/diet/upload_success";
+		return fileList;
 	}
 	
 	/**
@@ -308,6 +311,7 @@ public class DietController {
 		//String pId = (String)request.getSession().getAttribute("pId");
 		map.put("pId", pId);
 		List<Map<String, Object>> list = dietService.getDietList(map);
+		model.addAttribute("pId",pId);
 		model.addAttribute("dietList",list);
 		int total = dietService.countDietTotal(map);
 		int numPerPage = (Integer)map.get("numPerPage");
@@ -323,7 +327,7 @@ public class DietController {
 	
 	/**
 	 * 
-	 * <p>Title:跳转到运动量记录列表界面</p>
+	 * <p>Title:跳转到运动记录列表界面</p>
 	 * @author: 徐德荣
 	 * @date: 2016年12月29日
 	 *
@@ -359,6 +363,7 @@ public class DietController {
 	public String getDietList(HttpServletRequest request,Model model){
 		Map<String, Object> map = FormDataCollectUtil.getInstance().getFormDataWithPage(request);
 		List<Map<String, Object>> list = dietService.getDietList(map);
+		model.addAttribute("p_id",list.get(0).get("p_id"));
 		model.addAttribute("dietList",list);
 		int total = dietService.countDietTotal(map);
 		int numPerPage = (Integer)map.get("numPerPage");
@@ -442,7 +447,7 @@ public class DietController {
 	
 	/**
 	 * 
-	 * <p>Title:跳转到运动量记录界面</p>
+	 * <p>Title:跳转到运动记录界面</p>
 	 * @author: 徐德荣
 	 * @date: 2016年12月29日
 	 *
@@ -464,9 +469,9 @@ public class DietController {
 	@RequestMapping("dietary_info")
 	public String getDietaryInfo(HttpServletRequest request, Model model){
 		Map<String, Object> param = FormDataCollectUtil.getInstance().getFormData(request);
-		//String pId = request.getParameter("pId");
+		String pId = request.getParameter("pId");
 		//String pId = (String)request.getSession().getAttribute("pId");
-		String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
+		//String pId = "o-1WTwgc5wIiSvUy0-8V92XA0sic";
 		model.addAttribute("dietList", dietService.showDietInfo(param));
 		model.addAttribute("targetEnergy",dietService.getTargetEnergy(pId));
 		model.addAttribute("dietEnergy", dietService.showDietEnergy(param));
@@ -679,7 +684,56 @@ public class DietController {
 		}
 	}
 	
+	/**
+	 * 保存图片分析的食物数据
+	 * 
+	 * @author: xuderong
+	 * @date: 2017年5月25日
+	 *
+	 */
+	@RequestMapping("savePhotoDiet")
+	public void savePhotoDiet(HttpServletRequest request, HttpServletResponse response){
+		Map<String, Object> param = FormDataCollectUtil.getInstance().getFormData(request);
+		try {
+			String pId = request.getSession().getAttribute("pId").toString();
+			//String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
+			param.put("pId", pId);
+			String str = dietService.savePhotoDiet(param);
+			response.setContentType("text/html;charset=utf-8");
+			response.getWriter().print(str);
+		} catch (Exception e) {
+			log.error(e);
+		}
+	}
 	
+	@RequestMapping("img_diet_list")
+	public String showImgDietList(HttpServletRequest request, HttpServletResponse response, Model model){
+		Map<String, Object> map = FormDataCollectUtil.getInstance().getFormDataWithPage(request);
+		HttpSession session = request.getSession();
+		List<Map<String, Object>> list = dietService.getImgDietList(map);
+		model.addAttribute("dietList",list);
+		int total = dietService.countImgDietTotal(map);
+		int numPerPage = (Integer)map.get("numPerPage");
+		int totalPage = (int)Math.ceil((total*1.0)/numPerPage);
+		if(totalPage==0){
+			model.addAttribute("curPage",0);
+		}else{
+			model.addAttribute("curPage",map.get("curPage"));
+		}
+		model.addAttribute("totalPage",totalPage);
+		return "diet/img_diet_list";
+	}
+	
+	@RequestMapping("img_diet_info")
+	public String showImgDietInfo(HttpServletRequest request, HttpServletResponse response, Model model){
+		Map<String, Object> param = FormDataCollectUtil.getInstance().getFormData(request);
+		//String pId = (String)request.getSession().getAttribute("pId");
+		String pId = param.get("pId").toString();
+		List  list =dietService.showDietInfo(param);
+		model.addAttribute("targetEnergy",dietService.getTargetEnergy(pId));
+		model.addAttribute("dietInfo", dietService.showImgDietInfo(param));
+		return"diet/img_diet_info";
+	}
 }
 
 

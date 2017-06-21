@@ -24,6 +24,7 @@ String path = request.getContextPath();
   <div data-role="header">
    <a href="" data-role="button" onclick="window.location.href='../user/doctor_index'">主页</a>
     <h1>饮食记录列表</h1>
+    <a href="" data-role="button" onclick="window.location.href='../diet/img_diet_list?pId=${p_id }'">饮食记录(图片)</a>
   </div>
 
   <div data-role="content">

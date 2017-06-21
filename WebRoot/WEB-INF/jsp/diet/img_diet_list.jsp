@@ -24,13 +24,12 @@ String path = request.getContextPath();
   <div data-role="header">
    <a href="" data-role="button" onclick="window.location.href='../user/user_index'">主页</a>
     <h1>饮食记录列表</h1>
-    <a href="" data-role="button" onclick="window.location.href='../diet/img_diet_list?pId=${pId}'">饮食记录(图片)</a>
   </div>
 
   <div data-role="content">
     <ul data-role="listview" data-autodividers="false" data-inset="true" data-filter="true" data-filter-placeholder="搜索日期">
      <c:forEach var="diet" items="${dietList}" varStatus="s">
-    <li><a href="" onclick="window.location.href='diet_info?pId=${diet.p_id }&date=${diet.date }'">${diet.date }</a></li>
+    <li><a href="" onclick="window.location.href='img_diet_info?pId=${diet.pid }&date=${diet.date }'">${diet.date }</a></li>
     </c:forEach>
   </ul>
   </div>

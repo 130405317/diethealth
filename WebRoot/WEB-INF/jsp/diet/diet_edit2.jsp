@@ -3,8 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%
 	String path = request.getContextPath();
-	String pId = session.getAttribute("pId").toString();
-	//String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
+	//String pId = session.getAttribute("pId").toString();
+	String pId = "o-1WTwnmE5MzetfXjm_02IjLG8m4";
 %>
 <html>
 <head>
@@ -102,25 +102,9 @@
 						</p>
 					</div>
 					<div data-role="fieldcontain" id="mainfoodnums1" name="mainfoodnum">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('mainfoodnum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('mainfoodnum1')"
-									onchange="changeNumber('mainfoodnum1')" type="text"
-									name="number" id="mainfoodnum1" value="200" required="true">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button" onclick="subfoodnum('mainfoodnum1')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('mainfoodnum1')" id="mainfoodnum1" name="number"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('mainfoodnum1')" onchange="changeNumber('mainfoodnum1')" id="mainfoodnum1" name="number"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="mainfoodtype" id="mainfoodtype2" style="display: none">
@@ -149,25 +133,9 @@
 					</div>
 					<div data-role="fieldcontain" name="mainfoodnum" id="mainfoodnums2"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button" onclick="addfoodnum('mainfoodnum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('mainfoodnum2')"
-									onchange="changeNumber('mainfoodnum2')" type="text"
-									name="number" id="mainfoodnum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('mainfoodnum2')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('mainfoodnum2')" id="mainfoodnum2" name="number"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('mainfoodnum2')" onchange="changeNumber('mainfoodnum2')" id="mainfoodnum2" name="number"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="mainfoodtype" id="mainfoodtype3" style="display: none">
@@ -194,26 +162,9 @@
 					</div>
 					<div data-role="fieldcontain" id="mainfoodnums3" name="mainfoodnum"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('mainfoodnum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('mainfoodnum3')"
-									onchange="changeNumber('mainfoodnum3')" type="text"
-									name="number" id="mainfoodnum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('mainfoodnum3')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('mainfoodnum3')" id="mainfoodnum3" name="number"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('mainfoodnum3')" onchange="changeNumber('mainfoodnum3')" id="mainfoodnum3" name="number"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="mainfoodtype" id="mainfoodtype4" style="display: none">
@@ -239,26 +190,9 @@
 					</div>
 					<div data-role="fieldcontain" id="mainfoodnums4" name="mainfoodnum"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('mainfoodnum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('mainfoodnum4')"
-									onchange="changeNumber('mainfoodnum4')" type="text"
-									name="number" id="mainfoodnum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('mainfoodnum4')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('mainfoodnum4')" id="mainfoodnum4" name="number"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('mainfoodnum4')" onchange="changeNumber('mainfoodnum4')" id="mainfoodnum4" name="number"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="mainfoodtype" id="mainfoodtype5" style="display: none">
@@ -284,26 +218,9 @@
 					</div>
 					<div data-role="fieldcontain" id="mainfoodnums5" name="mainfoodnum"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('mainfoodnum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('mainfoodnum5')"
-									onchange="changeNumber('mainfoodnum5')" type="text"
-									name="number" id="mainfoodnum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('mainfoodnum5')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('mainfoodnum5')" id="mainfoodnum5" name="number"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('mainfoodnum5')" onchange="changeNumber('mainfoodnum5')" id="mainfoodnum5" name="number"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 				</div>
@@ -337,26 +254,9 @@
 
 					</div>
 					<div data-role="fieldcontain" name="meatnum" id="meatnums1">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('meatnum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('meatnum1')"
-									onchange="changeNumber('meatnum1')" type="text" name="number"
-									id="meatnum1" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('meatnum1')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('meatnum1')" name="number" id="meatnum1"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('meatnum1')" onchange="changeNumber('meatnum1')" name="number" id="meatnum1"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="meattype" id="meattype2" style="display: none">
@@ -380,26 +280,9 @@
 					</div>
 					<div data-role="fieldcontain" name="meatnum" id="meatnums2"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('meatnum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('meatnum2')"
-									onchange="changeNumber('meatnum2')" type="text" name="number"
-									id="meatnum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('meatnum2')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('meatnum2')" name="number" id="meatnum2"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('meatnum2')" onchange="changeNumber('meatnum2')" name="number" id="meatnum2"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="meattype" id="meattype3" style="display: none">
@@ -423,25 +306,9 @@
 					</div>
 					<div data-role="fieldcontain" name="meatnum" id="meatnums3"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('meatnum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('meatnum3')" onchange="changeNumber('meatnum3')" type="text" name="number"
-									id="meatnum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('meatnum3')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('meatnum3')" name="number" id="meatnum3"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('meatnum3')" onchange="changeNumber('meatnum3')" name="number" id="meatnum3"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="meattype" id="meattype4" style="display: none">
@@ -465,25 +332,9 @@
 					</div>
 					<div data-role="fieldcontain" name="meatnum" id="meatnums4"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('meatnum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('meatnum4')" onchange="changeNumber('meatnum4')" type="text" name="number"
-									id="meatnum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('meatnum4')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('meatnum4')" name="number" id="meatnum4"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('meatnum4')" onchange="changeNumber('meatnum4')" name="number" id="meatnum4"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="meattype" id="meattype5" style="display: none">
@@ -507,25 +358,9 @@
 					</div>
 					<div data-role="fieldcontain" name="meatnum" id="meatnums5"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('meatnum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('meatnum5')" onchange="changeNumber('meatnum5')" type="text" name="number"
-									id="meatnum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('meatnum5')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('meatnum5')" name="number" id="meatnum5"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('meatnum5')" onchange="changeNumber('meatnum5')" name="number" id="meatnum5"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 				</div>
@@ -560,26 +395,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums1">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum1')" onchange="changeNumber('vegetablesnum1')" type="text"
-									name="number" id="vegetablesnum1" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum1')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum1')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum1')" onchange="changeNumber('vegetablesnum1')" name="number"
 							id="vegetablesnum1" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype2"
@@ -605,26 +424,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums2" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum2')" onchange="changeNumber('vegetablesnum2')" type="text"
-									name="number" id="vegetablesnum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum2')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum2')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum2')" onchange="changeNumber('vegetablesnum2')" name="number"
 							id="vegetablesnum2" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype3"
@@ -650,26 +453,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums3" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum3')" onchange="changeNumber('vegetablesnum3')" type="text"
-									name="number" id="vegetablesnum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum3')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('vegetablesnum3')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum3')" onchange="changeNumber('vegetablesnum3')" name="number"
 							id="vegetablesnum3" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype4"
@@ -695,26 +482,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums4" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum4')" onchange="changeNumber('vegetablesnum4')" type="text"
-									name="number" id="vegetablesnum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum4')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum4')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum4')" onchange="changeNumber('vegetablesnum4')" name="number"
 							id="vegetablesnum4" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype5"
@@ -740,26 +511,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums5" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum5')" onchange="changeNumber('vegetablesnum5')" type="text"
-									name="number" id="vegetablesnum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum5')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('vegetablesnum5')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum5')" onchange="changeNumber('vegetablesnum5')" name="number"
 							id="vegetablesnum5" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype6"
@@ -785,26 +540,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums6" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum6')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum6')" onchange="changeNumber('vegetablesnum6')" type="text"
-									name="number" id="vegetablesnum6" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum6')" value="-" />
-							</div>
-						</div>
-						<!--  <input type="range"
-							onblur="standard('vegetablesnum6')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum6')" onchange="changeNumber('vegetablesnum6')" name="number"
 							id="vegetablesnum6" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype7"
@@ -830,26 +569,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums7" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum7')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum7')" onchange="changeNumber('vegetablesnum7')" type="text"
-									name="number" id="vegetablesnum7" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum7')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum7')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum7')" onchange="changeNumber('vegetablesnum7')" name="number"
 							id="vegetablesnum7" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype8"
@@ -875,26 +598,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums8" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum8')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum8')" onchange="changeNumber('vegetablesnum8')" type="text"
-									name="number" id="vegetablesnum8" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum8')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum8')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum8')" onchange="changeNumber('vegetablesnum8')" name="number"
 							id="vegetablesnum8" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype9"
@@ -920,26 +627,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums9" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum9')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum9')" onchange="changeNumber('vegetablesnum9')" type="text"
-									name="number" id="vegetablesnum9" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum9')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum9')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum9')" onchange="changeNumber('vegetablesnum9')" name="number"
 							id="vegetablesnum9" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 					<div name="vegetablestype" id="vegetablestype10"
@@ -965,26 +656,10 @@
 					</div>
 					<div data-role="fieldcontain" name="vegetablesnum"
 						id="vegetablesnums10" style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('vegetablesnum10')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('vegetablesnum10')" onchange="changeNumber('vegetablesnum10')" type="text"
-									name="number" id="vegetablesnum10" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('vegetablesnum10')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('vegetablesnum10')" name="number"
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('vegetablesnum10')" onchange="changeNumber('vegetablesnum10')" name="number"
 							id="vegetablesnum10" required="true" value="200" min="0"
-							max="1000"> -->
+							max="1000">
 					</div>
 
 				</div>
@@ -1016,25 +691,9 @@
 						</p>
 					</div>
 					<div data-role="fieldcontain" name="drinknum" id="drinknums1">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('drinknum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('drinknum1')" onchange="changeNumber('drinknum1')" type="text" name="number"
-									id="drinknum1" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('drinknum1')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('drinknum1')" name="number" id="drinknum1"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('drinknum1')" onchange="changeNumber('drinknum1')" name="number" id="drinknum1"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="drinktype" id="drinktype2" style="display: none">
@@ -1058,25 +717,9 @@
 					</div>
 					<div data-role="fieldcontain" name="drinknum" id="drinknums2"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('drinknum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('drinknum2')" onchange="changeNumber('drinknum2')" type="text" name="number"
-									id="drinknum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('drinknum2')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('drinknum2')" name="number" id="drinknum2"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('drinknum2')" onchange="changeNumber('drinknum2')" name="number" id="drinknum2"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="drinktype" id="drinktype3" style="display: none">
@@ -1100,25 +743,9 @@
 					</div>
 					<div data-role="fieldcontain" name="drinknum" id="drinknums3"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('drinknum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('drinknum3')" onchange="changeNumber('drinknum3')" type="text" name="number"
-									id="drinknum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('drinknum3')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('drinknum3')" name="number" id="drinknum3"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('drinknum3')" onchange="changeNumber('drinknum3')" name="number" id="drinknum3"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="drinktype" id="drinktype4" style="display: none">
@@ -1142,25 +769,9 @@
 					</div>
 					<div data-role="fieldcontain" name="drinknum" id="drinknums4"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('drinknum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('drinknum4')" onchange="changeNumber('drinknum4')" type="text" name="number"
-									id="drinknum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('drinknum4')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('drinknum4')" name="number" id="drinknum4"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('drinknum4')" onchange="changeNumber('drinknum4')" name="number" id="drinknum4"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="drinktype" id="drinktype5" style="display: none">
@@ -1184,25 +795,9 @@
 					</div>
 					<div data-role="fieldcontain" name="drinknum" id="drinknums5"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('drinknum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('drinknum5')" onchange="changeNumber('drinknum5')" type="text" name="number"
-									id="drinknum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('drinknum5')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('drinknum5')" name="number" id="drinknum5"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('drinknum5')" onchange="changeNumber('drinknum5')" name="number" id="drinknum5"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 				</div>
@@ -1217,7 +812,8 @@
 				<div id="nut">
 					<div name="nuttype" id="nuttype1">
 						<p>
-						<div id="nut1_div">
+
+							<div id="nut1_div">
 							<!-- 输入框 -->
 							<input id="nut1_keyword" type="text" size="50"
 								onkeyup="getMoreContents_nut('nut1')" placeholder="请输入并选择食物" />
@@ -1228,38 +824,22 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="nut1" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="nut1" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 
 					</div>
 					<div data-role="fieldcontain" name="nutnum" id="nutnums1">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('nutnum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('nutnum1')" onchange="changeNumber('nutnum1')" type="text" name="number"
-									id="nutnum1" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('nutnum1')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('nutnum1')" name="number" id="nutnum1"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('nutnum1')" onchange="changeNumber('nutnum1')" name="number" id="nutnum1"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="nuttype" id="nuttype2" style="display: none">
 						<p>
-						<div id="nut2_div">
+
+							<div id="nut2_div">
 							<!-- 输入框 -->
 							<input id="nut2_keyword" type="text" size="50"
 								onkeyup="getMoreContents_nut('nut2')" placeholder="请输入并选择食物" />
@@ -1270,39 +850,23 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="nut2" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="nut2" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 
 					</div>
 					<div data-role="fieldcontain" name="nutnum" id="nutnums2"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('nutnum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('nutnum2')" onchange="changeNumber('nutnum2')" type="text" name="number"
-									id="nutnum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('nutnum2')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('nutnum2')" name="number" id="nutnum2"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('nutnum2')" onchange="changeNumber('nutnum2')" name="number" id="nutnum2"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="nuttype" id="nuttype3" style="display: none">
 						<p>
-						<div id="nut3_div">
+
+							<div id="nut3_div">
 							<!-- 输入框 -->
 							<input id="nut3_keyword" type="text" size="50"
 								onkeyup="getMoreContents_nut('nut3')" placeholder="请输入并选择食物" />
@@ -1313,40 +877,23 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="nut3" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="nut3" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 
 					</div>
 					<div data-role="fieldcontain" name="nutnum" id="nutnums3"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('nutnum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('nutnum3')" onchange="changeNumber('nutnum3')" type="text" name="number"
-									id="nutnum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('nutnum3')" value="-" />
-							</div>
-						</div>
-
-						<!--  <input type="range"
-							onblur="standard('nutnum3')" name="number" id="nutnum3"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('nutnum3')" onchange="changeNumber('nutnum3')" name="number" id="nutnum3"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="nuttype" id="nuttype4" style="display: none">
 						<p>
-						<div id="nut4_div">
+
+							<div id="nut4_div">
 							<!-- 输入框 -->
 							<input id="nut4_keyword" type="text" size="50"
 								onkeyup="getMoreContents_nut('nut4')" placeholder="请输入并选择食物" />
@@ -1357,39 +904,23 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="nut4" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="nut4" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 
 					</div>
 					<div data-role="fieldcontain" name="nutnum" id="nutnums4"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('nutnum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('nutnum4')" onchange="changeNumber('nutnum4')" type="text" name="number"
-									id="nutnum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('nutnum4')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('nutnum4')" name="number" id="nutnum4"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('nutnum4')" onchange="changeNumber('nutnum4')" name="number" id="nutnum4"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="nuttype" id="nuttype5" style="display: none">
 						<p>
-						<div id="nut5_div">
+
+							<div id="nut5_div">
 							<!-- 输入框 -->
 							<input id="nut5_keyword" type="text" size="50"
 								onkeyup="getMoreContents_nut('nut5')" placeholder="请输入并选择食物" />
@@ -1400,34 +931,17 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="nut5" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="nut5" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 
 					</div>
 					<div data-role="fieldcontain" name="nutnum" id="nutnums5"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('nutnum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('nutnum5')" onchange="changeNumber('nutnum5')" type="text" name="number"
-									id="nutnum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('nutnum5')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('nutnum5')" name="number" id="nutnum5"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('nutnum5')" onchange="changeNumber('nutnum5')" name="number" id="nutnum5"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 				</div>
@@ -1443,7 +957,8 @@
 				<div id="fruits">
 					<div name="fruitstype" id="fruitstype1">
 						<p>
-						<div id="fruits1_div">
+
+							<div id="fruits1_div">
 							<!-- 输入框 -->
 							<input id="fruits1_keyword" type="text" size="50"
 								onkeyup="getMoreContents_fruits('fruits1')"
@@ -1455,37 +970,21 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="fruits1" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="fruits1" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 					</div>
 					<div data-role="fieldcontain" name="fruitsnum" id="fruitsnums1">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('fruitsnum1')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('fruitsnum1')" onchange="changeNumber('fruitsnum1')" type="text" name="number"
-									id="fruitsnum1" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('fruitsnum1')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('fruitsnum1')" name="number" id="fruitsnum1"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('fruitsnum1')" onchange="changeNumber('fruitsnum1')" name="number" id="fruitsnum1"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="fruitstype" id="fruitstype2" style="display: none">
 						<p>
-						<div id="fruits2_div">
+
+							<div id="fruits2_div">
 							<!-- 输入框 -->
 							<input id="fruits2_keyword" type="text" size="50"
 								onkeyup="getMoreContents_fruits('fruits2')"
@@ -1497,38 +996,22 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="fruits2" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="fruits2" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 					</div>
 					<div data-role="fieldcontain" name="fruitsnum" id="fruitsnums2"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('fruitsnum2')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('fruitsnum2')" onchange="changeNumber('fruitsnum2')" type="text" name="number"
-									id="fruitsnum2" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('fruitsnum2')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('fruitsnum2')" name="number" id="fruitsnum2"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('fruitsnum2')" onchange="changeNumber('fruitsnum2')" name="number" id="fruitsnum2"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="fruitstype" id="fruitstype3" style="display: none">
 						<p>
-						<div id="fruits3_div">
+
+							<div id="fruits3_div">
 							<!-- 输入框 -->
 							<input id="fruits3_keyword" type="text" size="50"
 								onkeyup="getMoreContents_fruits('fruits3')"
@@ -1540,38 +1023,22 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="fruits3" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="fruits3" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 					</div>
 					<div data-role="fieldcontain" name="fruitsnum" id="fruitsnums3"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('fruitsnum3')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('fruitsnum3')" onchange="changeNumber('fruitsnum3')" type="text" name="number"
-									id="fruitsnum3" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('fruitsnum3')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('fruitsnum3')" name="number" id="fruitsnum3"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('fruitsnum3')" onchange="changeNumber('fruitsnum3')" name="number" id="fruitsnum3"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="fruitstype" id="fruitstype4" style="display: none">
 						<p>
-						<div id="fruits4_div">
+
+							<div id="fruits4_div">
 							<!-- 输入框 -->
 							<input id="fruits4_keyword" type="text" size="50"
 								onkeyup="getMoreContents_fruits('fruits4')"
@@ -1583,38 +1050,22 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="fruits4" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="fruits4" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 					</div>
 					<div data-role="fieldcontain" name="fruitsnum" id="fruitsnums4"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('fruitsnum4')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('fruitsnum4')" onchange="changeNumber('fruitsnum4')" type="text" name="number"
-									id="fruitsnum4" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('fruitsnum4')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('fruitsnum4')" name="number" id="fruitsnum4"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('fruitsnum4')" onchange="changeNumber('fruitsnum4')" name="number" id="fruitsnum4"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 					<div name="fruitstype" id="fruitstype5" style="display: none">
 						<p>
-						<div id="fruits5_div">
+
+							<div id="fruits5_div">
 							<!-- 输入框 -->
 							<input id="fruits5_keyword" type="text" size="50"
 								onkeyup="getMoreContents_fruits('fruits5')"
@@ -1626,33 +1077,16 @@
 								<li>搜索结果1</li>
 								<li>搜索结果2</li>
 							</ul>
-						</div>
-						<input id="fruits5" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
-							style="display: none" />
+						</div><input id="fruits5" placeholder="请输入您需要的食物，我们会尽快录入" type="text"
+								style="display: none" />
 						</p>
 
 					</div>
 					<div data-role="fieldcontain" name="fruitsnum" id="fruitsnums5"
 						style="display: none">
-						<label for="number">食量（克）：</label>
-						<div class="ui-grid-b">
-							<div class="ui-block-a">
-								<input name="add" type="button"
-									onclick="addfoodnum('fruitsnum5')" value="+" />
-							</div>
-
-							<div class="ui-block-b">
-								<input onblur="standard('fruitsnum5')" onchange="changeNumber('fruitsnum5')" type="text" name="number"
-									id="fruitsnum5" value="200">
-							</div>
-							<div class="ui-block-c">
-								<input name="sub" type="button"
-									onclick="subfoodnum('fruitsnum5')" value="-" />
-							</div>
-						</div>
-						<!-- <input type="range"
-							onblur="standard('fruitsnum5')" name="number" id="fruitsnum5"
-							required="true" value="200" min="0" max="1000"> -->
+						<label for="number">食量（克）：</label> <input type="range"
+							onblur="standard('fruitsnum5')" onchange="changeNumber('fruitsnum5')" name="number" id="fruitsnum5"
+							required="true" value="200" min="0" max="1000">
 					</div>
 
 				</div>
@@ -1899,9 +1333,7 @@
 		if (!re.test(num)) {
 			alert("您输入的数值有误，请输入0-1000的数值！");
 			$('#' + id).val("200");
-			return false;
 		}
-
 	}
 
 	function addnewfood(id) {
@@ -2572,9 +2004,8 @@
 						+ ",'" + id + "')\">" + mainfood_data[i].name + "</li>";
 			}
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
@@ -2598,11 +2029,10 @@
 						+ " carotene=" + meat_data[i].carotene
 						+ " onclick=\"selectResult(" + meat_data[i].id + ",'"
 						+ id + "')\">" + meat_data[i].name + "</li>";
-			}
+			} 
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
@@ -2629,11 +2059,10 @@
 						+ " onclick=\"selectResult(" + vegetables_data[i].id
 						+ ",'" + id + "')\">" + vegetables_data[i].name
 						+ "</li>";
-			}
+			} 
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
@@ -2657,11 +2086,10 @@
 						+ " carotene=" + drink_data[i].carotene
 						+ " onclick=\"selectResult(" + drink_data[i].id + ",'"
 						+ id + "')\">" + drink_data[i].name + "</li>";
-			}
+			} 
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
@@ -2685,11 +2113,10 @@
 						+ nut_data[i].carotene + " onclick=\"selectResult("
 						+ nut_data[i].id + ",'" + id + "')\">"
 						+ nut_data[i].name + "</li>";
-			}
+			} 
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
@@ -2714,22 +2141,21 @@
 						+ fruits_data[i].carotene + " onclick=\"selectResult("
 						+ fruits_data[i].id + ",'" + id + "')\">"
 						+ fruits_data[i].name + "</li>";
-			}
+			} 
 		}
-		if (html == "") {
-			html = "<li onclick=\"showAddNewFood('" + id
-					+ "')\">找不到您输入的食物</li>"
+		if(html == ""){
+			html = "<li onclick=\"showAddNewFood('"+id+"')\">找不到您输入的食物</li>"
 		}
 		$("#" + id + "_search_suggest ul").html(html);
 
 	}
 
-	function showAddNewFood(id) {
-		$("#" + id).show();
+	function showAddNewFood(id){
+		$("#"+id).show();
 		$("#" + id + "_keyword").val("");
 		$("#" + id + "_search_suggest").hide();
 	}
-
+	
 	function selectResult(liId, divId) {
 		var result_data = [];
 		result_data[0] = $("#" + liId).attr("id");
@@ -2997,170 +2423,160 @@
 		}
 	}
 	//***************************食量改变********************************//
-	function changeNumber(id) {
-		var val = $("#" + id).val();
+	
+	function changeNumber(id){
+		var val = $("#"+id).val();
 		switch (id) {
-		case "mainfoodnum1": {
+		case "mainfoodnum1":{
 			numberchange(val, 'mainfood', '1', mainfood_select1);
 			break;
 		}
-		case "mainfoodnum2": {
+		case "mainfoodnum2":{
 			numberchange(val, 'mainfood', '2', mainfood_select2);
 			break;
 		}
-		case "mainfoodnum3": {
+		case "mainfoodnum3":{
 			numberchange(val, 'mainfood', '3', mainfood_select3);
 			break;
 		}
-		case "mainfoodnum4": {
+		case "mainfoodnum4":{
 			numberchange(val, 'mainfood', '4', mainfood_select4);
 			break;
 		}
-		case "mainfoodnum5": {
+		case "mainfoodnum5":{
 			numberchange(val, 'mainfood', '5', mainfood_select5);
 			break;
 		}
-		case "meatnum1": {
+		case "meatnum1":{
 			numberchange(val, 'meat', '1', meat_select1);
 			break;
 		}
-		case "meatnum2": {
+		case "meatnum2":{
 			numberchange(val, 'meat', '2', meat_select2);
 			break;
 		}
-		case "meatnum3": {
+		case "meatnum3":{
 			numberchange(val, 'meat', '3', meat_select3);
 			break;
 		}
-		case "meatnum4": {
+		case "meatnum4":{
 			numberchange(val, 'meat', '4', meat_select4);
 			break;
 		}
-		case "meatnum5": {
+		case "meatnum5":{
 			numberchange(val, 'meat', '5', meat_select5);
 			break;
 		}
-		case "vegetablesnum1": {
+		case "vegetablesnum1":{
 			numberchange(val, 'vegetables', '1', vegetables_select1);
 			break;
 		}
-		case "vegetablesnum2": {
+		case "vegetablesnum2":{
 			numberchange(val, 'vegetables', '2', vegetables_select2);
 			break;
 		}
-		case "vegetablesnum1": {
+		case "vegetablesnum1":{
 			numberchange(val, 'vegetables', '2', vegetables_select2);
 			break;
 		}
-
-		case "vegetablesnum3": {
+		
+		case "vegetablesnum3":{
 			numberchange(val, 'vegetables', '3', vegetables_select3);
 			break;
 		}
-		case "vegetablesnum4": {
+		case "vegetablesnum4":{
 			numberchange(val, 'vegetables', '4', vegetables_select4);
 			break;
 		}
-		case "vegetablesnum5": {
+		case "vegetablesnum5":{
 			numberchange(val, 'vegetables', '5', vegetables_select5);
 			break;
 		}
-		case "vegetablesnum6": {
+		case "vegetablesnum6":{
 			numberchange(val, 'vegetables', '6', vegetables_select6);
 			break;
 		}
-		case "vegetablesnum7": {
+		case "vegetablesnum7":{
 			numberchange(val, 'vegetables', '7', vegetables_select7);
 			break;
 		}
-		case "vegetablesnum8": {
+		case "vegetablesnum8":{
 			numberchange(val, 'vegetables', '8', vegetables_select8);
 			break;
 		}
-		case "vegetablesnum9": {
+		case "vegetablesnum9":{
 			numberchange(val, 'vegetables', '9', vegetables_select9);
 			break;
 		}
-		case "vegetablesnum10": {
+		case "vegetablesnum10":{
 			numberchange(val, 'vegetables', '10', vegetables_select10);
 			break;
 		}
-		case "drinknum1": {
+		case "drinknum1":{
 			numberchange(val, 'drink', '1', drink_select1);
 			break;
 		}
-		case "drinknum2": {
+		case "drinknum2":{
 			numberchange(val, 'drink', '2', drink_select2);
 			break;
 		}
-		case "drinknum3": {
+		case "drinknum3":{
 			numberchange(val, 'drink', '3', drink_select3);
 			break;
 		}
-		case "drinknum4": {
+		case "drinknum4":{
 			numberchange(val, 'drink', '4', drink_select4);
 			break;
 		}
-		case "drinknum5": {
+		case "drinknum5":{
 			numberchange(val, 'drink', '5', drink_select5);
 			break;
 		}
-		case "nutnum1": {
+		case "nutnum1":{
 			numberchange(val, 'nut', '1', nut_select1);
 			break;
 		}
-		case "nutnum2": {
+		case "nutnum2":{
 			numberchange(val, 'nut', '2', nut_select2);
 			break;
 		}
-		case "nutnum3": {
+		case "nutnum3":{
 			numberchange(val, 'nut', '3', nut_select3);
 			break;
 		}
-		case "nutnum4": {
+		case "nutnum4":{
 			numberchange(val, 'nut', '4', nut_select4);
 			break;
 		}
-		case "nutnum5": {
+		case "nutnum5":{
 			numberchange(val, 'nut', '5', nut_select5);
 			break;
 		}
-		case "fruitsnum1": {
+		case "fruitsnum1":{
 			numberchange(val, 'fruits', '1', fruits_select1);
 			break;
 		}
-		case "fruitsnum2": {
+		case "fruitsnum2":{
 			numberchange(val, 'fruits', '2', fruits_select2);
 			break;
 		}
-		case "fruitsnum3": {
+		case "fruitsnum3":{
 			numberchange(val, 'fruits', '3', fruits_select3);
 			break;
 		}
-		case "fruitsnum4": {
+		case "fruitsnum4":{
 			numberchange(val, 'fruits', '4', fruits_select4);
 			break;
 		}
-		case "fruitsnum5": {
+		case "fruitsnum5":{
 			numberchange(val, 'fruits', '5', fruits_select5);
 			break;
 		}
 		default:
 			break;
 		}
-
+		
 	}
-	//**************************实现变加速功能***************************//
 	
-	function addfoodnum(id){
-		var numval = parseInt($("#"+id).val());
-		$("#"+id).val(numval+1);
-		changeNumber(id)
-	}
-	function subfoodnum(id){
-		var numval = parseInt($("#"+id).val());
-		$("#"+id).val(numval-1);
-		changeNumber(id)
-	}
 </script>
 </html>

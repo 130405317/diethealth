@@ -66,4 +66,13 @@ public interface  DietService {
 	public Map<String, Object> getSportInfo(Map<String, Object> param);
 	
 	public List<Map<String, Object>> getAllFoodList();
+	
+	public String savePhotoDiet(Map<String, Object> param);
+	
+	public List<Map<String, Object>> getImgDietList(Map<String, Object> param);
+	
+	public int countImgDietTotal(Map<String, Object> map);
+	
+	public List<Map<String, Object>> showImgDietInfo(Map<String, Object> map);
+	
 }
